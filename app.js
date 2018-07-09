@@ -13,7 +13,7 @@ var Log = require("./models/log.js");
 var Game = require("./models/game.js");
 var indexRoutes          = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/quidditch");
+mongoose.connect("mongodb://quid:hogwarts1@ds229771.mlab.com:29771/quidditchhogwartsio");
 
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
