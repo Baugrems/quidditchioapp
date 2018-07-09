@@ -1,0 +1,30 @@
+<% include partials/header %>
+<h1>Gryffindor</h1>
+       <% roster.forEach(function(roster){
+           if(roster.house == "Gryffindor"){
+       %>
+                <li><a style="color: red" href="/roster/<%= roster.id %>"><i class="user circle icon"></i> <%= roster.name %></a></li>
+            <% } %>
+    <% }) %>
+<h1>Slytherin</h1>
+       <% roster.forEach(function(roster){
+           if(roster.house == "Slytherin"){
+       %>
+                <li><a style="color: green" href="/roster/<%= roster.id %>"><i class="user circle icon"></i> <%= roster.name %></a></li>
+            <% } %>
+    <% }) %>
+<h1>Ravenclaw</h1>
+       <% roster.forEach(function(roster){
+           if(roster.house == "Ravenclaw"){
+       %>
+                <li><a style="color: blue" href="/roster/<%= roster.id %>"><i class="user circle icon"></i> <%= roster.name %></a></li>
+            <% } %>
+    <% }) %>
+<h1>Hufflepuff</h1>
+       <% roster.forEach(function(roster){
+           if(roster.house == "Hufflepuff"){
+       %>
+                <li><a style="color: #f0f900" href="/roster/<%= roster.id %>"><i class="user circle icon"></i> <%= roster.name %></a></li>
+            <% } %>
+    <% }) %>
+<% include partials/footer %>

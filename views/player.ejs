@@ -1,0 +1,19 @@
+<% include partials/header %>
+   <% roster.forEach(function(roster){
+           if(roster.id == currentPlayer){
+       %>
+            <h1><%=roster.name%></h1>
+            <h1><%= roster.house%></h1>
+            <ul>
+                <li>Broom: <%=roster.broom%></li>
+                <li>Position: <%=roster.position%></li>
+                <li><strong>STA:</strong> <%=roster.stamina%> <strong>AGI:</strong> <%=roster.agility%> <strong>STR:</strong> <%=roster.strength%> <strong>CTRL:</strong> <%=roster.control%>
+                    <strong>ARC:</strong> <%=roster.arcane%> <strong>ACC:</strong> <%=roster.accuracy%>
+                </li>
+                <li><a href="/roster/<%= roster.id %>/edit">Edit Player</a></li>
+            </ul>
+            <% } %>
+    <% }) %>
+
+
+<% include partials/footer %>

@@ -1,0 +1,8 @@
+    <% include partials/header %>
+    <h1>All Brooms</h1>
+       <% brooms.forEach(function(brooms){
+       %>
+                <li><a href="/brooms/<%= brooms.id %>"><i class="quidditch icon"></i> <%= brooms.name %></a></li>
+    <% }) %>
+    
+    <% include partials/footer %>

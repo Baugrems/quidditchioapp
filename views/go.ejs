@@ -1,0 +1,177 @@
+<% include partials/header %>
+<h1>Play Game</h1>
+<div class="ui grid">
+  <div class="eight wide column">
+    <label><%= game.team1 %> Lineup:</label>
+    <ul>
+        <li><%= game.team1 %> Keeper - <%= game.team1Keeper %></li>
+        <li><%= game.team1 %> Chaser 1 - <%= game.team1Chaser1 %></li>
+        <li><%= game.team1 %> Chaser 2 - <%= game.team1Chaser2 %></li>
+        <li><%= game.team1 %> Chaser 3 - <%= game.team1Chaser3 %></li>
+        <li><%= game.team1 %> Beater 1 - <%= game.team1Beater1 %></li>
+        <li><%= game.team1 %> Beater 2 - <%= game.team1Beater2 %></li>
+        <li><%= game.team1 %> Seeker - <%= game.team1Seeker %></li>
+    </ul>
+  </div>
+  <div class="eight wide column">
+      <label><%= game.team2 %> Lineup:</label>
+    <ul>
+        <li><%= game.team2 %> Keeper - <%= game.team2Keeper %></li>
+        <li><%= game.team2 %> Chaser 1 - <%= game.team2Chaser1 %></li>
+        <li><%= game.team2 %> Chaser 2 - <%= game.team2Chaser2 %></li>
+        <li><%= game.team2 %> Chaser 3 - <%= game.team2Chaser3 %></li>
+        <li><%= game.team2 %> Beater 1 - <%= game.team2Beater1 %></li>
+        <li><%= game.team2 %> Beater 2 - <%= game.team2Beater2 %></li>
+        <li><%= game.team2 %> Seeker - <%= game.team2Seeker %></li>
+    </ul>
+  </div>
+</div>
+<h1>Actions:</h1>
+<div class="ui grid">
+    <div class="white eight wide column">
+        <h1>Keeper</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Block">Block a Shot</option>
+            <option value="Heckle">Heckle Other Team</option>
+            <option value="Encourage">Encourage Own Team</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Block">Block a Shot</option>
+            <option value="Heckle">Heckle Other Team</option>
+            <option value="Encourage">Encourage Own Team</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Chaser 1</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Chaser 2</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Chaser 3</h1>
+        <label><%= game.team1 %></label>
+        <select name="team1Chaser3">
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Pass">Pass Quaffle</option>
+            <option value="Steal">Steal Quaffle</option>
+            <option value="Guard">Guard Player</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="white eight wide column">
+        <h1>Beater 1</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Hit">Hit Player</option>
+            <option value="Guard">Guard Player</option>
+            <option value="Foul">Attempt Foul</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Hit">Hit Player</option>
+            <option value="Guard">Guard Player</option>
+            <option value="Foul">Attempt Foul</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Beater 2</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Hit">Hit Player</option>
+            <option value="Guard">Guard Player</option>
+            <option value="Foul">Attempt Foul</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Hit">Hit Player</option>
+            <option value="Guard">Guard Player</option>
+            <option value="Foul">Attempt Foul</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Seeker</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Find">Find Snitch</option>
+            <option value="Catch">Catch Snitch</option>
+            <option value="Heckle">Heckle Other Team</option>
+            <option value="Encourage">Encourage Own Team</option>
+        </select>
+        <button class="mini ui button violet">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Find">Find Snitch</option>
+            <option value="Catch">Catch Snitch</option>
+            <option value="Heckle">Heckle Other Team</option>
+            <option value="Encourage">Encourage Own Team</option>
+        </select>
+        <button class="mini ui button violet" id="team2SeekerBtn">Go</button>
+    </div>
+    <div class="white eight wide column">
+        <h1>Misc.</h1>
+        <label><%= game.team1 %></label>
+        <select>
+            <option value="Surrender">Give Up</option>
+        </select>
+        <button class="mini ui button violet" id="team1MiscBtn">Go</button>
+        <hr>
+        <label><%= game.team2 %></label>
+        <select>
+            <option value="Surrender">Give Up</option>
+        </select>
+        <button class="mini ui button violet" id="team2MiscBtn">Go</button>
+    </div>
+</div>
+<script src="/js/go.js"></script>
+<% include partials/footer %>

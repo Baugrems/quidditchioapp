@@ -1,0 +1,16 @@
+<% include partials/header %>
+<h1>Add New Broom</h1>
+	    <form action="/brooms" method="POST">
+	        <input type="text" placeholder="Broom Name" name="broomName" required>
+	        <p>Boosts?:</p>
+            Stamina:<input type="number" placeholder="0" name="stamina" required>
+            Agility:<input type="number" placeholder="0"  name=agility required>
+            Strength:<input type="number" placeholder="0" name="strength" required>
+            Control:<input type="number" placeholder="0" name="control" required>
+            Arcane Power:<input type="number" placeholder="0" name="arcane" required>
+            Accuracy:<input type="number" placeholder="0" name="accuracy" required>
+            Control Prerequisite:<input type="number" placeholder="0" name="prereq" required>
+            <h1>Submit to Add Broom</h1>
+            <input type="submit" value="Submit"/>
+        </form>
+<% include partials/footer %>

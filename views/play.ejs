@@ -1,0 +1,135 @@
+<% include partials/header %>
+<form class="ui form" action="/game/<%= game._id %>" method="POST">
+    <h1>
+        Set Lineup:
+    </h1>
+    <label><%= game.team1 %> Keeper</label>
+    <select name="game[team1Keeper]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Keeper</label>
+    <select name="game[team2Keeper]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Chaser 1</label>
+    <select name="game[team1Chaser1]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Chaser 1</label>
+    <select name="game[team2Chaser1]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Chaser 2</label>
+    <select name="game[team1Chaser2]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Chaser 2</label>
+    <select name="game[team2Chaser2]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Chaser 3</label>
+    <select name="game[team1Chaser3]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Chaser 3</label>
+    <select name="game[team2Chaser3]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Beater 1</label>
+    <select name="game[team1Beater1]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Beater 1</label>
+    <select name="game[team2Beater1]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Beater 2</label>
+    <select name="game[team1Beater2]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Beater 2</label>
+    <select name="game[team2Beater2]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team1 %> Seeker</label>
+    <select name="game[team1Seeker]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team1){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <label><%= game.team2 %> Seeker</label>
+    <select name="game[team2Seeker]">
+       <% roster.forEach(function(roster){
+           if(roster.house == game.team2){
+       %>
+                <option value="<%= roster.name %>"><%= roster.name %></option>
+            <% } %>
+    <% }) %>
+    </select>
+    <input type="submit" class="ui button violet" value="Set Lineup">
+</form>
+
+<% include partials/footer %>

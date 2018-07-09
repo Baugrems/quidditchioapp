@@ -1,0 +1,21 @@
+<% include partials/header %>
+   <% brooms.forEach(function(brooms){
+           if(brooms.id == currentBroom){
+       %>
+<h1>Edit <%= brooms.name %></h1>
+	    <form action="/brooms/edit" method="POST">
+	        <input type="text" value="<%=brooms.name%>" name="broomName" required>
+	        <p>Boosts?:</p>
+            Stamina:<input type="number" value="<%=brooms.stamina%>" name="stamina" required>
+            Agility:<input type="number" value="<%=brooms.agility%>"  name=agility required>
+            Strength:<input type="number" value="<%=brooms.strength%>" name="strength" required>
+            Control:<input type="number" value="<%=brooms.control%>" name="control" required>
+            Arcane Power:<input type="number" value="<%=brooms.arcane%>" name="arcane" required>
+            Accuracy:<input type="number" value="<%=brooms.accuracy%>" name="accuracy" required>
+            Control Prerequisite:<input type="number" value="<%=brooms.prereq%>" name="prereq" required>
+            <h1>Submit to Edit Broom</h1>
+            <input type="submit" value="Submit"/>
+        </form>
+                    <% } %>
+    <% }) %>
+<% include partials/footer %>

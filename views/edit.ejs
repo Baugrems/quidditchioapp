@@ -1,0 +1,41 @@
+<% include partials/header %>
+  <% roster.forEach(function(roster){
+           if(roster.id == currentPlayer){
+       %>
+       <h1>Edit Player</h1>
+	    <form action="/editPlayer" method="POST">
+	        <input type="text" name="charName" value="<%= roster.name %>" required>
+            Stamina:<input type="number" value="<%=roster.stamina%>" name="stamina" required>
+            Agility:<input type="number" value="<%=roster.agility%>"  name=agility required>
+            Strength:<input type="number" value="<%=roster.strength%>" name="strength" required>
+            Control:<input type="number" value="<%=roster.control%>" name="control" required>
+            Arcane Power:<input type="number" value="<%=roster.arcane%>" name="arcane" required>
+            Accuracy:<input type="number" value="<%=roster.accuracy%>" name="accuracy" required>
+	         <select name="house">
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+            </select>
+            <select name="position">
+                <option value="Keeper">Keeper</option>
+                <option value="Chaser">Chaser</option>
+                <option value="Beater">Beater</option>
+                <option value="Seeker">Seeker</option>
+            </select>
+	        <select name="broom">
+               <% brooms.forEach(function(brooms){
+               %>
+                        <option value="<%= brooms.name %>"><%= brooms.name %></option>
+                <% }) %>
+            </select> 
+            <h1>Editting ID: <%= roster.id %></h1>
+            <input type="submit" value="Submit"/>
+        </form>
+        <form action="/deleteplayer/<%= roster.id %>" method="POST">
+            <h1>Other Options:</h1>
+            <input type="submit" value="Delete Player">
+        </form>
+            <% } %>
+    <% }) %>
+<% include partials/footer %>

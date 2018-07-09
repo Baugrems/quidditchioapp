@@ -1,0 +1,7 @@
+<% include partials/header %>
+<h1>Action Logs</h1>
+<% results.forEach(function(result){ %>
+                <li style="font-size: 10px"><i class="clock outline icon"></i> <%= result.result %></li>
+    <% }) %>
+
+<% include partials/footer %>

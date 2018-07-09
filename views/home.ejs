@@ -1,0 +1,45 @@
+<% include partials/header %>
+<h1>Add New Player</h1>
+        <form class="ui form" action="/addplayer" method="POST">
+            <div class="field">
+                <label>Name</label>
+                <input type="text" name="charName" placeholder="Player Name" required>
+            </div>
+            <div class="field">
+                <label>House</label>
+                <select name="house">
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Broom</label>
+    	        <select name="broom">
+                   <% brooms.forEach(function(broom){ %>
+                            <option value="<%= broom.name %>"><%= broom.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+            <div class="field">
+                <label>Position</label>
+            <select name="position">
+                <option value="Keeper">Keeper</option>
+                <option value="Chaser">Chaser</option>
+                <option value="Beater">Beater</option>
+                <option value="Seeker">Seeker</option>
+            </select>
+            </div>
+            <div class="field">
+                Stamina:<input type="number" placeholder="0" name="stamina" required>
+                Agility:<input type="number" placeholder="0"  name=agility required>
+                Strength:<input type="number" placeholder="0" name="strength" required>
+                Control:<input type="number" placeholder="0" name="control" required>
+                Arcane Power:<input type="number" placeholder="0" name="arcane" required>
+                Accuracy:<input type="number" placeholder="0" name="accuracy" required>
+            </div>
+            <input class="circular big ui icon button violet" type="submit">
+        </form>
+
+<% include partials/footer %>
